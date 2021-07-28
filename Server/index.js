@@ -1,19 +1,13 @@
-const express = require("express");
-const app = express();
-const mongoose = require('mongoose');
 require('dotenv').config();
-const SERVER=process.env.SERVER;
-mongoose.connect('mongodb://'+SERVER+':27017/VeggieBasket', {useNewUrlParser: true, useUnifiedTopology: true});
+const express = require("express");
+var app = express();
+const home = require("./routes/home");
+const item= require("./routes/Items");
+const morgan = require("morgan");
+app.use(morgan("combined"));
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log("DB is now connected");// we're connected!
-});
-
-app.get("/", (req,res) => {
-  res.send("Hey Veggie Finder");
-});
+app.use("/", home);
+app.use("/items",item);
 
 app.listen(3000, (req, res) => {
   console.log("Server Started at port 3000");
