@@ -1,9 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
 
 function App() {
   return (
     <div className="App">
+    <Container>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,8 +20,14 @@ function App() {
           Learn React
         </a>
       </header>
+      </Container>
     </div>
   );
 }
 
 export default App;
+
+
+const Container= styled.section`
+  background-color:red !important;
+`;
