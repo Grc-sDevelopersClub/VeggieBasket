@@ -2,9 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const home = require("./routes/home");
-const item = require("./routes/Items");
-const user = require("./routes/User");
+const Home = require("./routes/home");
+const Item = require("./routes/Items");
+const User = require("./routes/User");
 const config = require('./config');
 const morgan = require("morgan");
 
@@ -39,10 +39,11 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-app.use("/", home);
-app.use("/items", item);
-app.use("/user", user);
+app.use("/", Home);
+app.use("/user", User);
+app.use('/wishlist',Wishlist);
+app.use('/items',Item);
 
 app.listen(PORT, (req, res) => {
-  console.log("Server Started at port 3000");
+  console.log(`Server Started at port ${PORT}`);
 });
