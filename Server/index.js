@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const Home = require("./routes/home");
 const Item = require("./routes/Items");
 const User = require("./routes/User");
+const Cart = require("./routes/cart");
+const Wishlist = require("./routes/wishlist");
 const config = require('./config');
 const morgan = require("morgan");
 
@@ -43,6 +45,7 @@ app.use("/", Home);
 app.use("/user", User);
 app.use('/wishlist',Wishlist);
 app.use('/items',Item);
+app.use('/cart',Cart);
 
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at port ${PORT}`);
