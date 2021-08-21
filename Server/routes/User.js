@@ -121,7 +121,7 @@ router.post('/login', (req, res) => {
                         const token = jwt.sign({
                                 id: user._id,
                                 username: user.username
-                            }, config.jwtSecret);
+                            }, process.env.jwtSecret);
                         res.json({ token, success: 'success' })
                     } else {
                        res.json({ errors: { invalidCredentials: 'Invalid Username or Password' } });
