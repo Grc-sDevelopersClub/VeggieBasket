@@ -70,6 +70,7 @@ const Shop = () => {
       <div>Total: ${cartTotal}</div>
     </div>
   );
+  
 };
 
 export default Shop;
