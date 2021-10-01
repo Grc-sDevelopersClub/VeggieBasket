@@ -1,36 +1,22 @@
+//Create Header including responsive navbar Cart 
+//Create Footer
 import styled from "styled-components";
-import Shop from "./component/Shop";
-import Home from "./component/Home";
-import Error from "./component/Error";
-import Admin from "./component/Admin";
-import Header from "./component/Header";
-import { Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
 
-const App = () => {
+const AppWrapper = styled.section`
+padding: 2% 3%;
+`;
+
+function App() {
   return (
-    <AppView>
-      <Header />
-      <Container>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/shop" component={Shop} />
-          <Route path="/admin" component={Admin} />
-          <Route component={Error} />
-        </Switch>
-      </Container>
-    </AppView>
+    <AppWrapper>
+    <div className="App">
+    <Header/>
+    <h1>Hello</h1>
+    </div>
+    </AppWrapper>
   );
-};
+}
 
 export default App;
 
-const AppView = styled.section`
-  height: 100vh;
-  width: 100vw;
-  background-color: #fff;
-  font-family: "Poppins", Arial, sans-serif;
-`;
-
-const Container = styled.section`
-  padding-top: 100px;
-`;

@@ -1,0 +1,20 @@
+
+==>Customer Facing
+
+=>Create Home page
+    =>Navigation Bar (Responsive) (Menu, cart, profile, Search bar)
+    =>Offer Banner
+    =>Category listing 
+    =>Best Offers crousel
+    =>Products by Category
+
+    =>Add to Cart on each Product 
+    =>Login/ Signup
+    =>Add to wishlist
+    =>Payment Authentication. 
+ =>Footer
+
+==>Admin Facing
+
+
+==>Delivery Facing
