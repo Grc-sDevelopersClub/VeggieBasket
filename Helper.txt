@@ -2,7 +2,7 @@
 ==>Customer Facing
 
 =>Create Home page
-    =>Navigation Bar (Responsive) (Menu, cart, profile, Search bar)
+    !=>Navigation Bar (Responsive) (Menu, cart, profile, Search bar)
     =>Offer Banner
     =>Category listing 
     =>Best Offers crousel
